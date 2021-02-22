@@ -1,0 +1,470 @@
+Traci
+[COMMON]
+sBlankCard = Blank Card
+Type_ShouQuan = System Card
+Type_Jilu = Record Card
+Type_FangHao = Room No. Setting Card
+Type_ShiJian = Date/Time Setting Card
+Type_KeRen = Guest Card 
+Type_TuiFang = Check-Out Card
+Type_ZuKong = Area Card
+Type_YingJi = Emergency Card
+Type_ZongKong = Master Card
+Type_LouDong = Building Card 
+Type_LouCeng = Floor Card
+
+RoomStatus_VC = Vacancy 
+RoomStatus_OH = Hourly Use
+RoomStatus_OT = Reservation
+RoomStatus_TO = Payment Remind
+RoomStatus_VD = Cleaning in Process
+RoomStatus_OO = Maintenance
+RoomStatus_OC_WalkIn = Guest
+RoomStatus_OC_Team = Guest Group
+
+CardStatus_Erased = The card's information has been erased.
+
+OpenPublicDoor = Public Entrance
+AccessBolt = Unlock the Deadbolt
+Holder = Card Holder
+Memo = Memo
+ErrOpenUSB = Open USB port failed, Please check the Encoder or USB connection port.
+ErrNoUSB = Please check the Encoder or USB connection port.
+ErrRegistor = Registration code is incorrect.
+ErrReadCard = Read card failed, Please check the Card or Encoder or USB port.
+ErrWriteCard = Write card failed, Please check the Card or Encoder or USB port.
+ErrInput = The information entered is incorrect. Please check it again.
+errGroupNo = Area No. Error, Please re-assign the Area No., a valid number is 0-255
+errBldRoomNo = Please check the Building No. and Room No.
+ErrRepeatBldRoomNo = The Building No. or Guestroom No. are duplicated. Please check them.
+msgAddRoom = Please add guestrooms first
+GroupRange = Assign an Area No., a valid number is 0-255.
+msgNoCard = Please put a valid card on the Encoder.
+msgIssueCardOK = Card Issued Successfully
+
+sIssueTime = Issue Date
+sExpiredTime = Expiration Date
+sShiDuan = Avaliable Time
+DaysRemain = Please registe the the software again within 
+RegExpired = The registration has expired. 
+
+[HELP]
+SoundMsg1 = The lock will make sounds and flash light while a card is being swiped.
+SoundMsg2 = 1 beep and music --- You have the correct Key Card, Turn the handle and open the door.
+SoundMsg3 = 2 beeps --- You have the correct Setting Card.
+SoundMsg4 = 3 beeps --- The deadbolt has been locked from the inside. Solution: Use the Master Card to open the door or check the switchs in the mechanical latch.
+SoundMsg5 = 6 beeps --- The Room No. is incorrect./ does not match. Solution: Re-set the lock's Room No. or check the Key Card's Room No. 
+SoundMsg6 = 7 beeps --- The time is incorrect./ does not match. Solution: Re-set the built-in lock's RTC(Real-Time-Clock) or check the Key Card's expiration.
+SoundMsg7 = 8 beeps --- Guest Card has been overridden by the new Guest Card or restricted by Check-Out Card. Solution: Swipe System Card or swipe Check-Out Card again infront of the lock.
+SoundMsg8 = 9 beeps --- The card has been reported lost. Solution: Erase this card(Erase the card's information) and Issue a new one.
+SoundMsg9 = 10 beeps --- System Card is not authorized. Solution: Use the mechanical key to open the door, and then pull out the mechanical key when the lock beeps 3 times, Swipe the System Card again, If the lock makes 2 beeps,  It's indicate a successful System Setting.
+SoundMsg10 = 11 beeps --- The Building No. or Floor No. is incorrect. / does not match. Solution: Re-set the lock's Room No.(Be sure to check the Building No. and Floor No.)  or check the Key Card's Building No. and Floor No.
+SoundMsg11 = 12 beeps --- The card has been overridden by the new one.  Solution: Swipe System Card infront of the lock.
+SoundMsg12 = 15 beeps --- The card is not recognized by this system.  Solution: Erase this card(Erase the card's information) and Issue a new one.
+SoundMsg13 = 30 beeps --- The card is not recognized by this system.  Solution: Return the card or the Control Board or the Encoder to the vender.
+
+[LOGON]
+Title = Login
+Welcome = WELCOME TO USE CARD LOCK
+Code = Operator
+Password = Password
+Entry = Enter
+Exit = Exit
+ErrMiMa = Please enter your user code and password correctly
+MiMa_Hint = Press F1 for help
+ModiMiMa_Hint = Change your password
+
+msgSelectGongHao = Please enter or select your user code.
+msgModiMiMa = Change the password.
+InputOldMiMa = Enter your current password:
+InputNewMiMa = Enter a new password:
+InputNewMiMa2 = Enter the new password again:
+errModiMiMa = The password you entered does not match. Please try again.
+okModiMiMa =  Password changed successfully.
+
+[MAIN]
+Screen = The recommended screen resolution is 1024 x 768 pixels.
+Title = Card Lock Management System
+Version = Version 
+Operator = Operator 
+Receiption = Reception
+Receiption_Hint = Issue Guest Cards / Guestrooms Management
+RoomsDefination = Building Management
+RoomsDefination_Hint = Building Management
+LocksConfiguration = Lock Setting
+LocksConfiguration_Hint = Setup door lock's system data
+KeysForStaff = Card Key For Hotel Staff
+KeysForStaff_Hint = Card Key For Hotel Staff
+SystemMaintenance = System Data Management
+SystemMaintenance_Hint = Set default parameters or other settings
+Reports = Records
+Reports_Hint = View or Print or Export Reports
+Exit = Exit
+Exit_Hint = Exit the program
+About_Hint = About
+
+[ROOMSDEFINATION]
+Title1 = Building/Guestroom Information Settings
+Title2 = Title2
+ListOfBuildings = Buildings List
+ListOfRooms = Guestrooms List
+
+BldNo = Building No.
+BldName = Building Name
+FlrNo = Floor No.
+RoomNo = Guestroom No.
+Type = Type
+Price = Price
+CardNum = Maximum Cards
+LockNo = Lock No.
+Status = Status
+
+AddBld = Add Building
+AddBld_Hint = Add building
+DelBld = Delete Building
+DelBld_Hint = Delete Building
+ModiBld = Modify Building
+ModiBld_Hint = Modify Building
+AddRoom = Add Guestroom
+AddRoom_Hint = Add guestroom
+DelRoom = Delete Guestroom
+DelRoom_Hint = Delete Guestroom
+ModiRoom = Modify Guestroom
+ModiRoom_Hint = Modify Guestroom Information
+Exit1 = Exit
+Exit2 = Exit
+Exit_Hint1 = Exit
+Exit_Hint2 = Exit
+
+msgDelBld = Are you sure you want to delete the selected building?
+msgDelBldAll = All guestrooms in this building will be deleted. Do you still want to continue?
+msgDelRoom = Are you sure you want to delete the selected guestroom?
+msgAddBld = Please add building(s) and guestroom(s)
+msgTogglePublic = Public Entrance
+msgPublicDoor = Public Entrance
+ErrInputBldNo = The assigned Building No. is incorrect. Please try again.
+ErrAddBld = Add building failed. Please check the Building No.
+ErrAddRoom = Add guestroom failed. Please check the Lock No.
+ErrModiRoom = Modify guestrooms information failed. Please check the Lock No.
+InputBldNo = Please assign the Building No., a valid number is 0-15.
+InputBldName = Please enter the Building Name.
+InputFlrNo = Please assign the Floor No., a valid number is 0-98.
+InputRomID = Please assign the Index No., a valid number is 0-98.
+InputRomID2 = Please assign the 2nd Index No., a valid number is 0-99.
+InputRoomNo = Please enter the Guestroom No.
+InputType = Please enter the guestroom type.
+InputPrice = Please enter the Room Rate
+InputMaxCardNum = Please enter the Maximum Number of cards
+InputPublicDoor = Public Entrance
+
+[LOCKCONFIGURATION]
+Title = Lock Setting
+NormalConfiguration = Basic Information Settings
+NormalConfiguration_Hint = Basic Settings for the Door Lock
+ExtraConfiguration =  Additional Information Settings
+ExtraConfiguration_Hint = Additional Settings for the Door Lock
+ResetCard = System Card
+ResetCard_Hint = Reset the lock
+RoomNoCard = Room No. Setting Card
+RoomNoCard_Hint = Set Room No. for the lock
+TimeCard = Date/Time Setting Card
+TimeCard_Hint = Set the built-in clock for the lock
+GroupNoCard = Area Setting Card
+GroupNoCard_Hint = Set/Reset Area No. for the lock
+  ClearOneGroup = Reset an Area No.
+  SetOneGroup = Set an Area No.
+  ClearAllGroups = Reset all Area No.s
+  SetAllGroups = Set all Area No.s
+BldRoomNo =  Building No. and Room No.
+CurrentTime = Current Time
+IssueCard = Issue Card
+IssueCard_Hint = Issue Card
+Search = Search
+Search_Hint = Search guestroom
+Exit = Exit
+Exit_Hint = Exit
+
+Guide = Operation Guide
+Memo = Select the card type, Enter the card holder name and Memo,Click Issue Card. Swipe the card in front of the  lock that you want to set up.
+
+CoverCardsBefore_Reset = Override all of the previous System Cards
+CoverCardsBefore_RoomNo = Override all of the previous Room No. Setting Cards
+CoverCardsBefore_Time = Override all of the previous Date/Time Setting Cards
+CoverCardsBefore_GroupNo = Override all of the previous Area Setting Cards 
+
+[KEYSFORSTAFF]
+Title = Key Cards for staff
+KeysForOpenDoor = Key Cards to unlock the door
+KeysForOpenDoor_Hint = Key Cards to unlock the door
+FunctionCard = Functional Cards
+FunctionCard_Hint = Functional Cards, Cannot be used to unlock doors
+Guide = Operation Guide
+FloorCard = Floor Card
+FloorCard_Hint = Open all guestrooms on the specified floor
+BuildingCard = Building Card
+BuildingCard_Hint = Open all guestrooms in the specified building
+MasterCard = Master Card
+MasterCard_Hint = Open all guestrooms
+EmergencyCard = Emergency Card
+EmergencyCard_Hint = Open all guestrooms, and the lock will remain unlocked
+GroupCard = Area Card
+GroupCard_Hint = Open all guestrooms in the specified Area No.
+RecordCard = Record Card
+RecordCard_Hint = Download unlocking records
+BlackNameCard = Lost Card
+BlackNameCard_Hint = Report a Lost card
+CheckOutCard = Check-Out Card
+CheckOutCard_Hint = Terminate/Toggle all of the previous Guest Cards
+Search = Search
+Search_Hint = Search for the Card No. that has been lost
+IssueCard = Issue Card
+IssueCard_Hint = Issue Card
+Exit = Exit
+Exit_Hint = Exit
+BuildingName = Building Name
+FloorNo = Floor No.
+ExpiredDate = Expiration Date
+Time = Avaliable Time
+LimitNo = Card No.
+GroupNo = Area No.
+
+CoverCardsBefore_Floor = Override all of the previous Floor Cards
+CoverCardsBefore_Building = Override all of the previous Building Cards
+CoverCardsBefore_Master = Override all of the previous Master Cards
+CoverCardsBefore_Emergency = Override all of the previous Emergency Cards
+CoverCardsBefore_Group = Override all of the previous Area Cards
+CoverCardsBefore_CheckOut = Override all of the previous Check-Out Cards
+
+[SYSTEMMAINTENANCE]
+Title = System Management
+Save = Save
+Save_Hint = Save
+Exit = Exit
+Exit_Hint = Exit
+ReturnToDefault = Return to Default
+ReturnToDefault_Hint = Return to Default
+
+msgSaveSuccess = Saved Successfully
+msgRegisteSuccess = Registration Successful
+InputAuthoCode = Please enter the Registration Code
+
+[OPTIONS]
+TITLE = Options 
+HotelName = Hotel Name
+CheckOut = Default Check-Out Time
+CheckOutToVC= Check-Out to vacancy status
+CheckOutToVC_Hint= The guestroom will be set to vacancy status after check-out
+CheckOutToVD= Check-Out to "cleaning in process" status
+CheckOutToVD_Hint= The guestroom will be set to "cleaning in process" status after check-out
+GuestLLock = Guest card can unlock dead bolt
+GuestLLock_Hint = Guest card can unlock the door when the deadbolt is locked from inside the room
+ExtraOptions = Option
+Alarm = Alarm while latches jammed
+Remind = Remind to close door
+NoDisturb = Do not Disturb
+Knob = Lock After Release Handle
+Music = Music
+Cover = Ignore Override Function
+
+[REGISTE]
+Title = System Register
+StepsOfRegiste = Steps Of Registe
+FirstStep =Step1: Get  the Device No.and tell it to the vender
+SecondStep =Step2: Input the Serial No. and Click Register
+Registe = Register
+errReg = Registration Code is incorrect
+GuideTitle =Note
+Memo1 = If you have to re-install and register the system again. When you register, please put a master card ( which can open doors ) on the encoder before click " Register " button. In this way, the cards issued from new system can work on the locks you already programmed.
+
+
+[OPERATORMANAGEMENT]
+Title = User Management
+ListOfOperators = User List
+OprtType = User Type
+
+AddOprt = Add User
+AddOprt_Hint = Add a new user
+RemoveOprt = Delete User
+RemoveOprt_Hint = Delete an existing user
+ModiOprt = Modify User
+ModiOprt_Hint = Modify user's information
+
+GongHao = User Code
+Name = User Name
+BeiZhu = Memo
+
+TypeOfOperator = Type of User
+SuperAdmin = SuperAdministrator
+Admin = Administrator
+Manager = Manager
+GenOprt = Receptionist
+
+InputGongHao = Please assign a user code
+InputName = Please enter the user name
+InputBeiZhu = Memo
+InputQuanXian = Please select the type of user
+  InputQuanXian_S = S : SuperAdministrator
+  InputQuanXian_A = A : Administrator
+  InputQuanXian_M = M : Manager
+  InputQuanXian_G = G : Receptionist
+
+ErrAddOprt = Add user failed. The user code might already exist. 
+ErrModiOprt = Modify user information failed. The user code might already exist.
+
+msgDelOprt = Are you sure you want to delete the selected user?
+
+[RECEIPTION]
+ModiRoomStatus = Room Status Setting
+ModiRoomStatus_Hint = Set the Room Status
+CloseModiRoomStatus = Exit
+CloseModiRoomStatus_Hint = Exit
+CloseGuest = Exit
+CloseGuest_Hint = Exit
+DispChart = Room Status Chart
+DispChart_Hint = Chart of Room Status 
+WalkIn = Guest Card
+WalkIn_Hint = Key Card for guests
+TeamIn = Guest Group
+TeamIn_Hint = Make reservation or Check-In for guest group
+Change = Room Change
+Change_Hint = Assign the guest to another room
+Postponed = Extend
+Postponed_Hint = Extend Stay
+CheckOutByCard = Check-Out by card
+CheckOutByCard_Hint = Check-out by Guest Card
+CardInfo = Check Card 
+CardInfo_Hint = Display card information
+CardErase = Cancel Card
+CardErase_Hint = Erase card information
+Exit = Exit
+Exit_Hint = Exit
+SelectRoom_Hint = Add
+unSelectRoom_Hint = Remove
+
+GuideTitle = Guide
+
+
+Memo1 = 1, Double click the rooms which you want to change their status. with " ? " means you have selected the rooms successfully. if you double click this rooms again, you could release them to normal status. 
+Memo2 = 2, Choose the room status from the right-hand side and change it. with " -> " means you have changed the room status successfully. 
+Memo3 = 
+If  a "?" appears in the 1st column, It means the guestroom has been selected.
+Memo4 = 
+Step 3. Choose the room status on the right side. and a "->" appears in the 1st column, It means the guestroom status has been set successfully.
+
+RoomNo = Guestroom No.
+NewCheckIn = New Check-in
+HourRate = Hourly Use
+Days = Days
+Hours = Hours
+ExpiredDate = Expiration Date
+CardCount =  Cards Number
+Search = Search
+Search_Hint = Search for guestrooms
+GuestDetail = Guest Info
+GuestDetail_Hint = Please fill in the guest's information
+IssueCard = Issue Card
+IssueCard_Hint = Issue a Guest Card
+CheckOutNoCard =  Check-Out without Card
+CheckOutNoCard_Hint =  Check-out without Guest Card
+
+Male = Male
+Female = Female
+CType1 = ID Card
+CType2 = Passport
+CType3 = Driver License
+CType4 = Military ID Card
+CType5 = Others (Please specify)
+
+msgCheckOutNoCardOK = Checked-out successfully (without card)
+msgCheckOutByCardOK = Checked-out successfully and the card has been erased.
+msgSelectRoom = Please select guestrooms
+msgOverCards = The number of issued Guest Cards has exceeded the limit.
+msgNotGuestCard = This card is not a Guest Card.  Please check it again.
+msgNoGuestInfo = No guest information for this card in the database.
+msgHasCheckOut = This guest has already checked-out.
+msgSelectGuest = Please select a guest
+msgCardErase = Are you sure you want to erase the card information?
+msgCardEraseOK = Erased card information successfully
+errCardErase = Please put the card you want to erase on the Encoder.
+errExpiredTime = Please check the Expiration Date, It must be later than the current date.
+InputRoomNo = Please select a guestroom.
+InputOTInfo = Please enter the guest's information.
+InputOOInfo = Please specify the problem
+
+GuestInfo = Guest Information
+TeamLeader = Guest Group Information
+GuestName = Guest Name
+Sex = Sex
+CType = Identification Type
+CNo = No.
+Price = Room Rate
+Deposit = Deposit
+Memo = Memo
+lblCheckIn = Check-in Date/Time
+lblCheckOut = Check-out Date/Time
+
+RoomsAllocation = Guestrooms List
+AllVCRooms = All Vacant Guestrooms
+RoomsSelected = Selected Guestrooms
+
+[REPORTS]
+Title = Reports
+CardsReport = Card Issuing Record
+GuestsReport = Guests' Record
+OpenReport = Unlocking Record
+
+All = All
+OpenTime = Unlocking Date/Time
+
+OK = OK
+OK_Hint = OK
+Cancel = Cancel
+Cancel_Hint = Cancel
+Option = Option
+Option_Hint = Option
+UpLoad = Upload
+UpLoad_Hint = Upload the unlocking records from the BEAM to the computer
+Print = Print
+Print_Hint = Print
+Excel = Export to Excel
+Excel_Hint = Export to Excel and You can edit it by Excel
+Delete = Delete
+Delete_Hint = Delete the records
+Exit = Exit
+Exit_Hint = Exit
+
+CheckIn = Check-In Date
+CheckOut = Check-Out Date
+CardType = Card Type
+RoomNo = Room No.
+GongHao = User Name
+GuestName = Guest Name
+OrderBy = Sort by
+Guide = Guide
+
+Holder = Card Holder
+BeiZhu = Memo
+Status = Status
+CardData = Card Data
+CardID = Card ID
+Time = Date/Time
+KeyOpen = Mechanical Key
+Flag_WalkIn = Guest
+Flag_TeamIn = Guest Group
+Flag_Copy = Extend Stay
+Flag_CheckOut = Check-Out
+
+TimeExport = Date/Time of Exported
+ExcelOK = Exported to excel successfully
+ExcelRow = Excel Rows:
+
+msgDelRecord = Are you sure you want to delete the selected records?
+msgDelRecord1 = Attention: You can only delete cards that have expired or have been erased.
+msgDelRecord2 = Attention: Yon can only delete guests whose scheduled Check-out dates expired or have Checked-out.
+
+errRecorder1 = Reading of the current BEAM version failed
+errRecorder2 = Please connect a BEAM to the computer
+errRecorder3 = Uploading of the records failed
+
+msgRecorder1 = The uploading produre may take about 1 minute, continue?
+msgRecorder2 = It will overwrite the previous records in the database, continue?

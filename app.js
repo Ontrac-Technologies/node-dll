@@ -28,12 +28,9 @@ const app = ffi.Library('./dlls/proRFL.dll', {
     ]
   ],
   CardErase: ['int', ['int', 'int', 'string']],
-  LimitCard: [
-    'int',
-    ['int', 'int', 'int', 'int', 'string', 'string', 'string']
-  ],
-  GetCardTypeByCardDataStr: ['int', ['string', 'string']],
-  GetGuestLockNoByCardDataStr: ['int', ['int', 'string', 'string']]
+  LimitCard: ['int', ['int', 'int', 'int', 'int', 'string', 'string', 'string']]
+  /* GetCardTypeByCardDataStr: ['int', ['string', 'string']],
+  GetGuestLockNoByCardDataStr: ['int', ['int', 'string', 'string']] */
 });
 
 const getDLLVersion = () => {
@@ -285,5 +282,5 @@ const getGuestLockNo = () => {
 // readGuestCardClicked();
 // buzzerClicked();
 // initializePluggedUSB();
-// getDLLVersion();
+getDLLVersion();
 // getGuestLockNo();
