@@ -1,13 +1,16 @@
 const ffi = require('ffi-napi');
 
+// Please note: If installing ffi-napi is giving issues, installing node-gyp and windows-build-tools globally might help.
+
 const flagUSB = 1;
 
-// Convert JSString to CString
+// This converts JSString to CString
 function TEXT(text) {
   return Buffer.from(`${text}\0`, 'ucs2');
 }
 
-const app = ffi.Library('./dlls/proRFL.dll', {
+// This initializes the DLL functions
+const app = ffi.Library('./dlls2/proRFL.dll', {
   GetDLLVersion: ['int', ['string']],
   initializeUSB: ['int', ['int']],
   Buzzer: ['int', ['int', 'int']],
@@ -33,7 +36,9 @@ const app = ffi.Library('./dlls/proRFL.dll', {
   GetGuestLockNoByCardDataStr: ['int', ['int', 'string', 'string']] */
 });
 
+// This get's the DLL version
 const getDLLVersion = () => {
+  // For some strange reasons, that number works.
   const string = TEXT('1280000000');
   const version = app.GetDLLVersion(string);
   if (version === 0) {
@@ -43,6 +48,7 @@ const getDLLVersion = () => {
   }
 };
 
+// This function initializes the USB
 const initializePluggedUSB = () => {
   st = app.initializeUSB(flagUSB);
   console.log('st', st);
@@ -53,6 +59,7 @@ const initializePluggedUSB = () => {
   }
 };
 
+// This function buzzess the RF Writer
 const buzzerClicked = () => {
   const result = app.Buzzer(flagUSB, 50);
   console.log('res', result);
@@ -61,6 +68,7 @@ const buzzerClicked = () => {
   }
 };
 
+// This function gets the Hex String of a card
 const getBufferHexStr = () => {
   let bufCard = TEXT('128000000000000000000000000000');
 
@@ -72,6 +80,7 @@ const getBufferHexStr = () => {
   }
 };
 
+// This function gets the Id of a card
 const getCardId = () => {
   let bufCard = TEXT('1280000000000000000000000000');
 
@@ -83,6 +92,7 @@ const getCardId = () => {
   }
 };
 
+// This function details of a guest card
 const readGuestCard = () => {
   let bufCard = TEXT('128');
   const res = app.ReadCard(flagUSB, bufCard);
@@ -96,17 +106,19 @@ const readGuestCard = () => {
   return true;
 };
 
+// This function issues the guest card.
+// TODO: This is the bone of contention
 const issueCard = () => {
   // fUsB
-  const hotelId = 1; // dIsColD
+  const hotelId = 8; // dIsColD
   const cardNo = 1; // Place a limit that it can't exceed 16 and atleast 1
-  const dia = 1; //TODO: 1. I don't understand. 2. Place a limit that it can't exceed 255
+  const dia = 5; //TODO: 1. I don't understand. 2. Place a limit that it can't exceed 255
   const deadbolt = 1; // LLock -> Create a radio button to choose which deadbolt option you want
-  const pdoors = 0; // public door
-  const startDate = TEXT('2102081248');
-  const endDate = TEXT('2102100100');
-  const lockNo = TEXT(2); // TODO: Get it in the card lock management system maybe I'll use roomId
-  const bufHexStr = TEXT(getBufferHexStr());
+  const pdoors = 1; // public door
+  const startDate = '2102241248';
+  const endDate = '2102280100';
+  const lockNo = '01000101'; // TODO: Get it in the card lock management system maybe I'll use roomId
+  const bufHexStr = getBufferHexStr();
 
   if (readGuestCard() !== true) {
     return 'Error! Could not read guest card.';
@@ -137,6 +149,7 @@ const issueCard = () => {
   }
 };
 
+// Reads the guest card
 const readGuestCardClicked = () => {
   if (readGuestCard() !== true) {
     return 'Error! Could not read guest card.';
@@ -144,6 +157,7 @@ const readGuestCardClicked = () => {
   console.log('Card Id: ', getCardId());
 };
 
+// This erases all the details on a card
 const eraseCard = () => {
   if (readGuestCard() !== true) {
     return 'Error! Could not read guest card.';
@@ -162,8 +176,8 @@ const eraseCard = () => {
   }
 };
 
+// This limits the card
 const limitCard = () => {
-  // fUSB
   const hotelId = 1; // DlsCoID
   const cardNo = 1;
   const dai = 1; // GuestId
@@ -188,6 +202,7 @@ const limitCard = () => {
   console.log('res', res);
 };
 
+// This gets the guest card type
 const getCardType = () => {
   const bufCard = getBufferHexStr();
   const cardType = TEXT('16');
@@ -277,10 +292,11 @@ const getGuestLockNo = () => {
 // limitCard();
 // console.log(eraseCard());
 // issueCard();
-// console.log(getBufferHexStr());
-// console.log(getCardId());
+console.log(getBufferHexStr());
+console.log(getCardId());
 // readGuestCardClicked();
 // buzzerClicked();
 // initializePluggedUSB();
-getDLLVersion();
+// getDLLVersion();
 // getGuestLockNo();
+// eraseCard();
