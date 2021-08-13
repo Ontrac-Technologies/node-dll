@@ -115,12 +115,13 @@ const issueCard = () => {
   const dia = 5; //TODO: 1. I don't understand. 2. Place a limit that it can't exceed 255
   const deadbolt = 1; // LLock -> Create a radio button to choose which deadbolt option you want
   const pdoors = 1; // public door
-  const startDate = '2102241248';
-  const endDate = '2102280100';
+  const startDate = '2108131248';
+  const endDate = '2108280100';
   const lockNo = '01000101'; // TODO: Get it in the card lock management system maybe I'll use roomId
   const bufHexStr = getBufferHexStr();
 
   if (readGuestCard() !== true) {
+    console.log('error');
     return 'Error! Could not read guest card.';
   }
 
@@ -291,9 +292,9 @@ const getGuestLockNo = () => {
 // getCardType();
 // limitCard();
 // console.log(eraseCard());
-// issueCard();
-console.log(getBufferHexStr());
-console.log(getCardId());
+issueCard();
+// console.log(getBufferHexStr());
+// console.log(getCardId());
 // readGuestCardClicked();
 // buzzerClicked();
 // initializePluggedUSB();
